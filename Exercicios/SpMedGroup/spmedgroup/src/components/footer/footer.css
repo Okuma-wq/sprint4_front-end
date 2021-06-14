@@ -1,0 +1,63 @@
+#footer{
+    height: 13em;
+    width: 100%;
+    background-color: #5A8EE0;
+}
+
+#esquerda-footer {
+    width: 30%;
+    height: 100%;
+
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+#links-esquerda-footer {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: flex-start;
+}
+
+#centro-footer {
+    width: 33%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Logo-footer {
+    font-size: 1.2em;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+
+#img-logo {
+    width: 3em;
+}
+
+.branco{
+    color: white;
+}
+
+#direita-footer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#links-direita-footer {
+    margin-top: 3em;
+}

@@ -1,0 +1,75 @@
+#header {
+    height: 4.2em;
+    background-color: #5A8EE0;
+}
+
+.content{
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    /* background-color: red; */
+    margin: auto;
+}
+
+#login{
+    height: 75%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.flex-bt-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-header{
+    display: flex;
+    align-items: flex-end;
+}
+
+#logo-header h3{
+    color: white;
+}
+
+#logo-img-header{
+    width: 2.7em;
+}
+
+#user-img {
+    width: 3em;
+    /* background-color: red; */
+}
+
+#btn-sair {
+    color: white;
+    font-size: 1.1em;
+}
+
+#menu {
+    display: flex;
+    height: 90%;
+    /* background-color: red; */
+}
+
+#btn-adm {
+    width: 21.875em;
+    /* height: 3.4em; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1.5em;
+}
+
+#user-sair{
+    /* height: 3.4em; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu-btn {
+    color: white;
+    margin-top: 30px;
+    font-size: 1.1em;
+}

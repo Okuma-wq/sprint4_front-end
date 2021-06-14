@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import { token } from '../../../services/auth';
+import Header from '../../../components/header/header';
 
 class ConsultasPaciente extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class ConsultasPaciente extends Component {
   render() {
     return (
       <div>
+        <Header Tipo={2}/>
         <main>
           <section>
             {/* Lista Consultas adm */}

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Header from '../../../components/header/header';
 
 class CadastrarConsulta extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class CadastrarConsulta extends Component {
   // lembrar de perguntar sobre isso
   atualizarEstado = async (event) => {
     await this.setState({ [event.target.name]: event.target.value })
-    console.log(event.target.value)
+    //console.log(event.target.value)
   }
 
   //testar isso depois de arrumar cadastro
@@ -76,6 +77,7 @@ class CadastrarConsulta extends Component {
   render() {
     return (
       <div>
+        <Header Tipo={3}/>
         <main>
           <section>
             <h2>Cadastro de Consultas</h2>

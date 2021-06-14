@@ -1,5 +1,6 @@
 import { Component } from "react";
 import EditarConsulta from "../Editar consulta/EditarConsulta";
+import Header from '../../../components/header/header';
 
 class ConsultasAdm extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class ConsultasAdm extends Component {
 
       .then(dados => this.setState({ listaConsultas: dados }))
 
-      .then(console.log(this.state.listaConsultas))
+      //.then(console.log(this.state.listaConsultas))
 
       .catch(erro => console.log(erro))
   }
@@ -45,6 +46,7 @@ class ConsultasAdm extends Component {
   render() {
     return (
       <div>
+        <Header Tipo = {3}/>
         {this.state.renderEditar && <EditarConsulta perfil="adm" consultaSelecionada={this.state.consultaSelecionada} alterarEstado={this.alterarState} />}
         <main>
           <section>

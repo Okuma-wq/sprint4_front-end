@@ -1,6 +1,7 @@
 import { Component } from "react";
 import EditarConsulta from "../Editar consulta/EditarConsulta";
 import axios from "axios";
+import Header from '../../../components/header/header';
 
 class ConsultasMedico extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class ConsultasMedico extends Component {
 
       .then(resposta => this.setState({listaConsultas : resposta.data}))
 
-      .then(resposta => console.log(resposta.data))
+      //.then(resposta => console.log(resposta.data))
 
       .catch(erro => console.log(erro))
   }
@@ -46,6 +47,7 @@ class ConsultasMedico extends Component {
   render() {
     return (
       <div>
+        <Header Tipo={2}/>
         {this.state.renderEditar && <EditarConsulta perfil="medico" consultaSelecionada={this.state.consultaSelecionada} alterarEstado={this.alterarState} />}
         <main>
           <section>
