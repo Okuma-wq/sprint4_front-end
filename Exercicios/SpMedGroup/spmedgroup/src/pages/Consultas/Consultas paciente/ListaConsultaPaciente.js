@@ -7,8 +7,13 @@ class ConsultasPaciente extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listaConsultas: []
+      listaConsultas: [],
+      hora : ''
     }
+  }
+
+  options = {
+    hour: 'numeric', minute: 'numeric'
   }
 
   listarConsultas = () => {
@@ -44,7 +49,7 @@ class ConsultasPaciente extends Component {
                     <td>{consulta.idMedicoNavigation.nomeMedico}</td>
                     <td>{consulta.idMedicoNavigation.idEspecialidadeNavigation.especialidade1}</td>
                     <td>{consulta.idSituacaoNavigation.situacao}</td>
-                    <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(consulta.dataConsulta)) + " as " + new Date(consulta.dataConsulta).getTime().toString()}</td>
+                    <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(consulta.dataConsulta)) + " as " + new Intl.DateTimeFormat('pt-BR', this.options).format(new Date(consulta.dataConsulta).getTime().toString())}</td>
                     <td>{consulta.descricao}</td>
                   </tr>
                 )

@@ -65,10 +65,10 @@ class Login extends Component {
       <div>
         <Header Tipo = {1} />
         <main id='body'>
-          <div id='escurecer' />
-          <div id='card'>
-            <form>
-              <div>
+          <div id='escurecer'/>
+          <div className='card-login'>
+            <form id='form'>
+              <div className='input-area'>
                 <h3>Email</h3>
                 <input
                   className='input'
@@ -78,7 +78,7 @@ class Login extends Component {
                   onChange={this.atualizarEstado}
                   />
               </div>
-              <div>
+              <div className='input-area'>
                 <h3>Senha</h3>
                 <input
                   className='input'
@@ -88,10 +88,10 @@ class Login extends Component {
                   onChange={this.atualizarEstado}
                 />  
               </div>
-              <p>{this.state.erroMessagem}</p>
+              <p id='msg-erro'>{this.state.erroMessagem}</p>
 
               {
-                this.state.isLoding === false ? <button type='submit' onClick={this.efetuarLogin} disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}>Logar</button> : <button type='submit' onClick={this.efetuarLogin} disabled>Logar</button>
+                this.state.isLoding === false ? <button type='submit' onClick={this.efetuarLogin} id='btn-login' disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}>Logar</button> : <button id='btn-login' type='submit' onClick={this.efetuarLogin} disabled>Logar</button>
               }
             </form>
           </div>

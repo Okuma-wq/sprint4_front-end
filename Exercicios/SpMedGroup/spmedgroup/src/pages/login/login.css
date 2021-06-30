@@ -8,15 +8,52 @@
   align-items: center;
 }
 
-#card {
+.card-login {
   height: 50%;
   width: 40%;
   background-color: #5A8EE0;
-  border-radius: 8%;
+  border-radius: 30px;
   box-shadow: black;
+  /* z-index: 3; */
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+#form {
+  width: 90%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.input-area {
+  width: 100%;
+  margin: 20px;
+  /* background-color: blue; */
+}
+
+.input {
+  width: 100%;
+  height: 50%;
+  border-radius: 50px;
+}
+
+#msg-erro {
+  font-size: 1.2em;
+  color: rgb(168, 0, 0);
+  margin-bottom: 1em;
+}
+
+#btn-login {
+  width: 100%;
+  height: 3em;
+  border-radius: 20px;
+  background-color: blue;
+  /* color: white; */
 }

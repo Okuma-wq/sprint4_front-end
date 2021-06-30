@@ -17,7 +17,11 @@ class CadastrarConsulta extends Component {
   }
 
   listarPacientes = () => {
-    fetch('https://localhost:5001/api/paciente')
+    fetch('https://localhost:5001/api/paciente', {
+      headers: {
+        'Authorization' : 'Bearer ' + localStorage.getItem('token')
+      }
+    })
 
       .then(lista => lista.json())
 
@@ -27,7 +31,10 @@ class CadastrarConsulta extends Component {
   }
 
   listarMedicos = () => {
-    fetch('https://localhost:5001/api/medico')
+    fetch('https://localhost:5001/api/medico',{
+    headers: {
+      'Authorization' : 'Bearer ' + localStorage.getItem('token')
+    }})
 
       .then(resposta => resposta.json())
 

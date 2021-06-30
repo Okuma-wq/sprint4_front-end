@@ -7597,11 +7597,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\Desktop\\Repositório\\sprint-2-back-end\\exercicios\\Sp_Medical_Group\\Back-end\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\Desktop\\Repositório\\sprint4_front-end\\Exercicios\\SpMedGroup\\Sp_Medical_Group Back end\\Back-end\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi.csproj",
       "projectName": "senai.SpMedGroup.webApi",
-      "projectPath": "C:\\Users\\pedro\\Desktop\\Repositório\\sprint-2-back-end\\exercicios\\Sp_Medical_Group\\Back-end\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi.csproj",
+      "projectPath": "C:\\Users\\pedro\\Desktop\\Repositório\\sprint4_front-end\\Exercicios\\SpMedGroup\\Sp_Medical_Group Back end\\Back-end\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\Desktop\\Repositório\\sprint-2-back-end\\exercicios\\Sp_Medical_Group\\Back-end\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi\\obj\\",
+      "outputPath": "C:\\Users\\pedro\\Desktop\\Repositório\\sprint4_front-end\\Exercicios\\SpMedGroup\\Sp_Medical_Group Back end\\Back-end\\senai.SpMedGroup.webApi\\senai.SpMedGroup.webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
