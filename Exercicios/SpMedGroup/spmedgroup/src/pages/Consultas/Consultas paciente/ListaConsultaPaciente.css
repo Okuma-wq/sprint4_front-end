@@ -1,0 +1,47 @@
+#body {
+    height: 50em;
+    background-image: url('../../../assets/imagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.card-listaPaciente {
+    height: auto;
+    width: 50em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    border-radius: 30px;
+    background-color: #5A8EE0;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.card-listaPaciente h2{
+    margin-bottom: 1em;   
+}
+
+.tabela{
+    width: 90%;
+    height: 90%;
+    /* background-color: red; */
+}
+
+.item-tabela {
+    height: 2em;
+    /* background-color: red; */
+}

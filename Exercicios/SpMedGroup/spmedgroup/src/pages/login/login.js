@@ -8,7 +8,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      UA : props.usuarioAutenticado,
+      UA: props.usuarioAutenticado,
       erroMessagem: '',
       email: '',
       senha: '',
@@ -63,37 +63,39 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Header Tipo = {1} />
+        <Header Tipo={1} />
         <main id='body'>
-          <div id='escurecer'/>
-          <div className='card-login'>
-            <form id='form'>
-              <div className='input-area'>
-                <h3>Email</h3>
-                <input
-                  className='input'
-                  type='email'
-                  name='email'
-                  value={this.state.email}
-                  onChange={this.atualizarEstado}
-                  />
-              </div>
-              <div className='input-area'>
-                <h3>Senha</h3>
-                <input
-                  className='input'
-                  type='text'
-                  name='senha'
-                  value={this.state.senha}
-                  onChange={this.atualizarEstado}
-                />  
-              </div>
-              <p id='msg-erro'>{this.state.erroMessagem}</p>
+          <div id='escurecer'>
 
-              {
-                this.state.isLoding === false ? <button type='submit' onClick={this.efetuarLogin} id='btn-login' disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}>Logar</button> : <button id='btn-login' type='submit' onClick={this.efetuarLogin} disabled>Logar</button>
-              }
-            </form>
+            <div className='card-login'>
+              <form id='form'>
+                <div className='input-area'>
+                  <h3>Email</h3>
+                  <input
+                    className='input'
+                    type='email'
+                    name='email'
+                    value={this.state.email}
+                    onChange={this.atualizarEstado}
+                  />
+                </div>
+                <div className='input-area'>
+                  <h3>Senha</h3>
+                  <input
+                    className='input'
+                    type='text'
+                    name='senha'
+                    value={this.state.senha}
+                    onChange={this.atualizarEstado}
+                  />
+                </div>
+                <p id='msg-erro'>{this.state.erroMessagem}</p>
+
+                {
+                  this.state.isLoding === false ? <button type='submit' onClick={this.efetuarLogin} id='btn-login' disabled={this.state.email === '' || this.state.senha === '' ? 'none' : ''}>Logar</button> : <button id='btn-login' type='submit' onClick={this.efetuarLogin} disabled>Logar</button>
+                }
+              </form>
+            </div>
           </div>
         </main>
       </div>

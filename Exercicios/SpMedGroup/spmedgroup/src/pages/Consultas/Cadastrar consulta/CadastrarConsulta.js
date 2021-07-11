@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Header from '../../../components/header/header';
+import './CadastrarConsulta.css'
 
 class CadastrarConsulta extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class CadastrarConsulta extends Component {
   listarPacientes = () => {
     fetch('https://localhost:5001/api/paciente', {
       headers: {
-        'Authorization' : 'Bearer ' + localStorage.getItem('token')
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
       }
     })
 
@@ -31,10 +32,11 @@ class CadastrarConsulta extends Component {
   }
 
   listarMedicos = () => {
-    fetch('https://localhost:5001/api/medico',{
-    headers: {
-      'Authorization' : 'Bearer ' + localStorage.getItem('token')
-    }})
+    fetch('https://localhost:5001/api/medico', {
+      headers: {
+        'Authorization': 'Bearer ' + localStorage.getItem('token')
+      }
+    })
 
       .then(resposta => resposta.json())
 
@@ -84,52 +86,73 @@ class CadastrarConsulta extends Component {
   render() {
     return (
       <div>
-        <Header Tipo={3}/>
-        <main>
+        <Header Tipo={3} />
+        <main id='body'>
           <section>
-            <h2>Cadastro de Consultas</h2>
+            <div id='escurecer'>
+              <div className='card-cadastrar'>
 
-            {/* Formulario de cadastro de consulta */}
-            <form onSubmit={this.cadastrarconsulta}>
-              <div>
-                <select name="idPaciente" id="idPaciente"
-                  onChange={this.atualizarEstado}>
-                  <option value="0">Selecione uma opção abaixo...</option>
-                  {
-                    this.state.listaPacientes.map((paciente) => {
-                      return (
-                        <option key={paciente.idPaciente} value={paciente.idPaciente}>{paciente.nomePaciente}</option>
-                      )
-                    })
-                  }
-                </select>
-                <select name="idMedico" id="idMedico"
-                  onChange={this.atualizarEstado}>
-                  <option value="0">Selecione uma opção abaixo...</option>
-                  {
-                    this.state.listaMedicos.map((medico) => {
-                      return (
-                        <option key={medico.idMedico} value={medico.idMedico}>{medico.nomeMedico}</option>
-                      )
-                    })
-                  }
-                </select>
-                <input
-                  type="date"
-                  name="data"
-                  value={this.state.data}
-                  onChange={this.atualizarEstado}
-                />
-                <input
-                  type="time"
-                  name="hora"
-                  value={this.state.time}
-                  onChange={this.atualizarEstado}
-                  on
-                />
-                <button type="submit">Cadastrar</button>
+                <h2>Cadastro de Consultas</h2>
+
+                {/* Formulario de cadastro de consulta */}
+                <form onSubmit={this.cadastrarconsulta} id='card-cadastrar-content'>
+                  <div id='card-cadastrar-top'>
+                    <div>
+                      <h3>Paciente</h3>
+                      <select name="idPaciente" id="idPaciente"
+                        onChange={this.atualizarEstado}>
+                        <option value="0">Selecione uma opção abaixo...</option>
+                        {
+                          this.state.listaPacientes.map((paciente) => {
+                            return (
+                              <option key={paciente.idPaciente} value={paciente.idPaciente}>{paciente.nomePaciente}</option>
+                            )
+                          })
+                        }
+                      </select>
+                    </div>
+                    <div>
+                      <h3>Médico</h3>
+                      <select name="idMedico" id="idMedico"
+                        onChange={this.atualizarEstado}>
+                        <option value="0">Selecione uma opção abaixo...</option>
+                        {
+                          this.state.listaMedicos.map((medico) => {
+                            return (
+                              <option key={medico.idMedico} value={medico.idMedico}>{medico.nomeMedico}</option>
+                            )
+                          })
+                        }
+                      </select>
+                    </div>
+                  </div>
+                  <div id='card-cadastrar-bottom'>
+                    <div>
+                      <h3>Data</h3>
+                      <input
+                        type="date"
+                        name="data"
+                        value={this.state.data}
+                        onChange={this.atualizarEstado}
+                      />
+                    </div>
+                    <div>
+                      <h3>Hora</h3>
+                      <input
+                        type="time"
+                        name="hora"
+                        value={this.state.time}
+                        onChange={this.atualizarEstado}
+                        on
+                      />
+                    </div>
+                  </div>
+                  <div id='btn-submit-area'>
+                    <button type="submit" id='btn-submit'>Cadastrar</button>
+                  </div>
+                </form>
               </div>
-            </form>
+            </div>
           </section>
         </main>
       </div>

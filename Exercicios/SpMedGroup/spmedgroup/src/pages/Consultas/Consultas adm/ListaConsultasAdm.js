@@ -15,6 +15,10 @@ class ConsultasAdm extends Component {
     }
   }
 
+  options = {
+    hour: 'numeric', minute: 'numeric'
+  }
+
   listarConsultas = () => {
     fetch('https://localhost:5001/api/consulta', {
       headers: {
@@ -55,36 +59,37 @@ class ConsultasAdm extends Component {
         {this.state.renderEditar && <EditarConsulta perfil="adm" consultaSelecionada={this.state.consultaSelecionada} alterarEstado={this.alterarState} />}
         <main id='body'>
           <section id='section'>
-            <div id='escurecer' />
-            <div className='card-listaAdm'>
-              {/* Lista Consultas adm */}
-              <h2>Lista de Consultas</h2>
-              <table className='tabela'>
-                <thead>
-                  <tr >
-                    <th>Paciente</th>
-                    <th>Médico</th>
-                    <th>Especialidade</th>
-                    <th>Data</th>
-                    <th>Situação</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {
-                    this.state.listaConsultas.map((consulta) => {
-                      return (
-                        <tr key={consulta.idConsulta} onClick={() => this.alterarState(consulta)} className='item-tabela'>
+            <div id='escurecer'>
+              <div className='card-listaAdm'>
+                {/* Lista Consultas adm */}
+                <h2>Lista de Consultas</h2>
+                <table className='tabela'>
+                  <thead>
+                    <tr >
+                      <th>Paciente</th>
+                      <th>Médico</th>
+                      <th>Especialidade</th>
+                      <th>Data e Horário</th>
+                      <th>Situação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      this.state.listaConsultas.map((consulta) => {
+                        return (
+                          <tr key={consulta.idConsulta} onClick={() => this.alterarState(consulta)} className='item-tabela'>
                             <td>{consulta.idPacienteNavigation.nomePaciente}</td>
                             <td>{consulta.idMedicoNavigation.nomeMedico}</td>
                             <td>{consulta.idMedicoNavigation.idEspecialidadeNavigation.especialidade1}</td>
-                            <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(consulta.dataConsulta))}</td>
+                            <td>{new Intl.DateTimeFormat('pt-BR').format(new Date(consulta.dataConsulta))  + " as " + new Intl.DateTimeFormat('pt-BR', this.options).format(new Date(consulta.dataConsulta).getTime().toString())}</td>
                             <td>{consulta.idSituacaoNavigation.situacao}</td>
-                        </tr>
-                      )
-                    })
-                  }
-                </tbody>
-              </table>
+                          </tr>
+                        )
+                      })
+                    }
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </main>
